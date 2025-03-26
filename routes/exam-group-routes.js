@@ -28,4 +28,21 @@ router.post('/exams', (req, res) => {
     res.status(201).json(newExam);
 });
 
+// Define the PUT /exams/:id endpoint
+router.put('/exams/:id', (req, res) => {
+    const id = parseInt(req.params.id, 10); 
+    const updatedExam = req.body; 
+
+    const examIndex = exams.findIndex(exam => exam.id === id);
+
+    if (examIndex !== -1) {
+        exams[examIndex] = { ...exams[examIndex], ...updatedExam };
+
+        res.json(exams[examIndex]); 
+    } else {
+        res.status(404).json({ error: 'Exam not found' });
+    }
+});
+
+
 module.exports = router;
