@@ -12,3 +12,6 @@ app.use('/api', examGroupRoutes);
 app.listen(3000, () => {
     console.log('Server running on http://localhost:3000');
 });
+
+// This is a change made in the main branch to simulate conflicts
+
