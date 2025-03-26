@@ -11,13 +11,13 @@ app.get('/exam-group', (req, res) => {
 // Define the GET /exams endpoint
 app.get('/exams', (req, res) => {
     const exams = [
-        { id: 1, name: 'Math Exam' },
-        { id: 2, name: 'Science Exam' },
-        { id: 3, name: 'History Exam' }
+        { id: 1, name: 'Jeff Monreal' },
+        { id: 2, name: 'Alexus Sagaral' },
+        { id: 3, name: 'Mark Dave Catubig' },
+        { id: 4, name: 'Natasha Dinopol' }
     ];
     res.json(exams);
 });
-
 
 
 app.listen(3000, () => {
